@@ -1,0 +1,126 @@
+{% load staticfiles %}
+{% load rbac %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title> 权限管理主页</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="{% static "css/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/css/animate.css" %}">
+    <link rel="stylesheet" href="{% static "css/css/style.css" %}">
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overfoly-y:auto">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs" style="font-size:20px;">
+                                        <i class="fa fa-area-chart"></i>
+                                        <strong class="font-bold">管理系统</strong>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="logo-element">hAdmin
+                        </div>
+                    </li>
+                    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                        <span class="ng-scope">分类</span>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="index_v1.html">
+                            <i class="fa fa-home"></i>
+                            <span class="nav-label">主页</span>
+                        </a>
+                    </li>
+                    <li class="line dk"></li>
+                    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                        <span class="ng-scope">分类</span>
+                    </li>
+                    <li>
+                            {% menu_html request %}
+                    </li>
+                    <li class="line dk"></li>
+                    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                        <span class="ng-scope">分类</span>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cutlery"></i>   <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="line dk"></li>
+                    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                        <span class="ng-scope">分类</span>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="basic_gallery.html">基本图库</a>
+                            </li>
+                            <li><a class="J_menuItem" href="carousel.html">图片切换</a>
+                            </li>
+                            <li><a class="J_menuItem" href="blueimp.html">Blueimp相册</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        </div>
+
+
+    <!-- 全局js -->
+    <script src="{% static "jquery-3.1.1.js" %}"></script>
+    <script src="{% static "js/js/jquery.min.js" %}"></script>
+    <script src="{% static "js/js/bootstrap.min.js" %}"></script>
+    <script src="js/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="{% static "js/js/plugins/metisMenu/jquery.metisMenu.js" %}"></script>
+    <script src="{% static "js/js/plugins/slimscroll/jquery.slimscroll.min.js" %}"></script>
+    <script src="{% static "js/js/plugins/layer/layer.min.js" %}"></script>
+
+    <!-- 自定义js -->
+    <script src="{% static "js/js/hAdmin.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/js/index.js" %}"></script>
+    <!-- 第三方插件 -->
+    <script src="{% static "js/js/plugins/pace/pace.min.js" %}"></script>
+
+</body>
+
+</html>

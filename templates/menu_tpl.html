@@ -1,0 +1,16 @@
+{% for k, v in page_menu.items %}
+    <div class="item">
+        <div class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+            <span class="ng-scope">{{ v.menu_title }}</span>
+        </div>
+        <div class="permission {{ v.opened }}">
+            {% for i in v.children %}
+                <div>
+                    <span class="nav-label">
+                        <a href="{{ i.url }}" class="{{ v.opened }}">{{ i.title }}</a>
+                    </span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}
