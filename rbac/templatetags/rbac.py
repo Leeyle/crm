@@ -36,7 +36,7 @@ def menu_html(request):
         else:
             result[menu_id] = {
                 'menu_id': item['menu_id'],
-                'menu_title':item['menu_title'],
+                'menu_title': item['menu_title'],
                 'active': active,
                 'children': [
                     {
